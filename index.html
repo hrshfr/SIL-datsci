@@ -1,0 +1,130 @@
+<html>
+    <body>
+        <div id="mid-container">
+            <span id="title">Prediksi Harga Komoditas</span>
+            <img id="fruit-pic" src="./fruit.png" alt="fruit">
+            <div class="container-dropdown">
+                <div id="text-komoditas">Komoditas</div>
+                <select name="komoditas" class="komoditas">
+                    <option value="Cabe Rawit Merah">Cabe Rawit Merah</option>
+                    <option value="Daging Sapi">Daging Sapi</option>
+                    <option value="Daging Ayam">Daging Ayam</option>
+                    <option value="Telur Ayam">Telur Ayam</option>
+                    <option value="Minyak Goreng Kemasan">Minyak Goreng Kemasan</option>
+                    <option value="Gula Pasir">Gula Pasir</option>
+                    <option value="Beras Medium">Beras Medium</option>
+                    <option value="Terigu">Terigu</option>
+                    <option value="Bawang Bonggol">Bawang Bonggol</option>
+                    <option value="Kedelai">Kedelai</option>
+                </select>
+            </div>
+
+            <div class="container-dropdown">
+                <div id="text-komoditas">Tanggal Prediksi</div>
+                <input type="date" name="" class="komoditas">
+            </div>
+
+            <button>Submit</button>
+
+        </div>
+        </div>        
+    </body>
+
+</html>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+    body{
+        margin: 0;
+        /* width: 100vw;
+        height: 100vh; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #F1F3FE;
+        overflow: hidden;
+    }
+
+    #mid-container{
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 50%;
+        height: 80%;
+        background-color: white;
+        border-radius: 1rem;
+        padding: 2rem 5rem;
+        filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.08));
+    }
+
+    #wrapper{
+        background-color: aqua;
+        width: 100%;
+        height: 100%;
+    }
+
+    #title{
+        font-family: Poppins;
+        font-weight: 700;
+        font-size: 1.2em;
+        color: #47579E;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #fruit-pic{
+        width: 25rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #container-dropdown{
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+        /* margin-top: 2rem; */
+    }
+
+    #text-komoditas{
+        font-family: Poppins;
+        font-size: 0.75rem;
+        color: #47579E;
+    }
+
+    .komoditas{
+        margin-top: 0.3rem;
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        font-family: Poppins;
+        color: #1E1E1E;
+        outline-color: #47579E;
+        border: solid #D9D9D9 1px
+    }
+
+    button{
+        background-color: #94F3C9;
+        border:0;
+        width: 10rem;
+        font-family: Poppins;
+        font-weight: 700;
+        padding: 0.6rem;
+        border-radius: 0.5rem;
+        margin:0 auto 0 auto;
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        #fruit-pic{
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+  
+</style>
