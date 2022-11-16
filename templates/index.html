@@ -3,11 +3,12 @@
         <div id="mid-container">
             <span id="title">Prediksi Harga Komoditas</span>
             <img id="fruit-pic" src="{{url_for('static', filename='fruit.png')}}" alt="fruit">
-            <div>
+            <div id="parent">
                 <form action="{{ url_for('predict') }}" method="post">
                     <div class="container-dropdown">
                         <div id="text-komoditas">Komoditas</div>
                         <select name="komoditas" class="komoditas" required>
+                            <option value="" disabled selected>Pilih komoditas...</option>
                             <option value="Cabe Merah Keriting">Cabe Merah Keriting</option>
                             <option value="Daging Sapi">Daging Sapi</option>
                             <option value="Daging Ayam">Daging Ayam</option>
@@ -28,8 +29,9 @@
                     <button type="submit">Submit</button>
                 </form>
             </div>
-            <div>
-                <div id="text-komoditas">Harga Prediksi: {{currency_string}}</div>
+            <div id="container-hasil">
+                <div id="text-komoditas">Komoditas: {{commodity}}</div>
+                <div id="text-komoditas">Harga Prediksi: {{currency_string}}/kg</div>
                 <div id="text-komoditas">Tanggal Prediksi: {{date}}</div>
             </div>
         </div>
@@ -42,8 +44,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
     body{
         margin: 0;
-        /* width: 100vw;
-        height: 100vh; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -61,7 +61,7 @@
         height: 80%;
         background-color: white;
         border-radius: 1rem;
-        padding: 2rem 5rem;
+        padding: 3rem 5rem;
         filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.08));
     }
 
@@ -81,7 +81,7 @@
     }
 
     #fruit-pic{
-        width: 25rem;
+        width: 20rem;
         margin-left: auto;
         margin-right: auto;
     }
@@ -92,13 +92,35 @@
         flex-direction: column;
         width: 100%;
         height: fit-content;
-        /* margin-top: 2rem; */
+        margin-top: 2rem;
+    }
+
+    #parent{
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    form{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: center;
     }
 
     #text-komoditas{
         font-family: Poppins;
         font-size: 0.75rem;
         color: #47579E;
+        margin-top: 0.2rem;
+    }
+
+    #container-hasil{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
 
     .komoditas{

@@ -52,7 +52,7 @@ def predict():
 
     app.logger.info('Prediction ends with response: %s', currency_string)
 
-    return render_template("index.html", currency_string=currency_string, date=date)
+    return render_template("index.html", currency_string=currency_string, date=date, commodity=commodity)
 
 def get_prediction(commodity, date):
     value = np.array([[dt.datetime.toordinal(dt.datetime.strptime(date, '%Y-%m-%d'))]])
