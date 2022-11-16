@@ -2,30 +2,36 @@
     <body>
         <div id="mid-container">
             <span id="title">Prediksi Harga Komoditas</span>
-            <img id="fruit-pic" src="./fruit.png" alt="fruit">
-            <div class="container-dropdown">
-                <div id="text-komoditas">Komoditas</div>
-                <select name="komoditas" class="komoditas">
-                    <option value="Cabe Rawit Merah">Cabe Rawit Merah</option>
-                    <option value="Daging Sapi">Daging Sapi</option>
-                    <option value="Daging Ayam">Daging Ayam</option>
-                    <option value="Telur Ayam">Telur Ayam</option>
-                    <option value="Minyak Goreng Kemasan">Minyak Goreng Kemasan</option>
-                    <option value="Gula Pasir">Gula Pasir</option>
-                    <option value="Beras Medium">Beras Medium</option>
-                    <option value="Terigu">Terigu</option>
-                    <option value="Bawang Bonggol">Bawang Bonggol</option>
-                    <option value="Kedelai">Kedelai</option>
-                </select>
+            <img id="fruit-pic" src="{{url_for('static', filename='fruit.png')}}" alt="fruit">
+            <div>
+                <form action="{{ url_for('predict') }}" method="post">
+                    <div class="container-dropdown">
+                        <div id="text-komoditas">Komoditas</div>
+                        <select name="komoditas" class="komoditas" required>
+                            <option value="Cabe Merah Keriting">Cabe Merah Keriting</option>
+                            <option value="Daging Sapi">Daging Sapi</option>
+                            <option value="Daging Ayam">Daging Ayam</option>
+                            <option value="Telur Ayam">Telur Ayam</option>
+                            <option value="Minyak Goreng Kemasan">Minyak Goreng Kemasan</option>
+                            <option value="Gula Pasir">Gula Pasir</option>
+                            <option value="Beras Medium">Beras Medium</option>
+                            <option value="Terigu">Terigu</option>
+                            <option value="Bawang Bonggol">Bawang Bonggol</option>
+                            <option value="Kedelai">Kedelai</option>
+                        </select>
+                    </div>
+        
+                    <div class="container-dropdown">
+                        <div id="text-komoditas">Tanggal Prediksi</div>
+                        <input type="date" name="tanggal" class="komoditas" required>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
             </div>
-
-            <div class="container-dropdown">
-                <div id="text-komoditas">Tanggal Prediksi</div>
-                <input type="date" name="" class="komoditas">
+            <div>
+                <div id="text-komoditas">Harga Prediksi: {{currency_string}}</div>
+                <div id="text-komoditas">Tanggal Prediksi: {{date}}</div>
             </div>
-
-            <button>Submit</button>
-
         </div>
         </div>        
     </body>
