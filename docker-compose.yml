@@ -4,6 +4,6 @@ services:
   datsci:
     build: .
     ports:
-      - "5001:5000"
+      - "5000:5000"
     volumes:
       - .:/datsci
