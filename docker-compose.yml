@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  datsci:
+    build: .
+    ports:
+      - "5001:5000"
+    volumes:
+      - .:/datsci
