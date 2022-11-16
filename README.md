@@ -1,5 +1,7 @@
 # SIL-datsci
 
+![](screenshot/index.png)
+
 ## Set up & Installation
 
 ### 1. Create virtual environment
